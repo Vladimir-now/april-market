@@ -26,4 +26,5 @@ public class CartController {
         cartService.deleteProductFromCart(productService.findProductDtoById(id).orElseThrow(() -> new RuntimeException("Not found!!!")));
         return cartService.getProducts();
     }
+
 }
