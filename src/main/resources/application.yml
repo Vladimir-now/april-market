@@ -1,5 +1,5 @@
 server:
-  port: 8189
+  port: 8080
   servlet:
     context-path: /shop
 spring:
@@ -7,7 +7,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=april-market
 #    username: postgres
-#    password: admin
+#    password: 5516
   jpa:
     show-sql: true
     properties:

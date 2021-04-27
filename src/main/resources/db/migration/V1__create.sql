@@ -1,3 +1,5 @@
+CREATE SCHEMA IF NOT EXISTS "april-market" AUTHORIZATION postgres;
+
 create table users (
     id                      bigserial primary key,
     username                varchar(30) not null unique,

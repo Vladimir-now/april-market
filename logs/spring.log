@@ -1,184 +1,470 @@
-21-04-2021 22:22:54.353 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 15544 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
-21-04-2021 22:22:54.356 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-21-04-2021 22:22:55.422 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
-21-04-2021 22:22:55.428 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-21-04-2021 22:22:55.429 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
-21-04-2021 22:22:55.838 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
-21-04-2021 22:22:55.838 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
-21-04-2021 22:22:55.928 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
-21-04-2021 22:22:55.933 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-21-04-2021 22:22:56.010 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-21-04-2021 22:22:56.024 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
-21-04-2021 22:22:56.065 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.028s)
-21-04-2021 22:22:56.073 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
-21-04-2021 22:22:56.074 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
-21-04-2021 22:22:56.121 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-21-04-2021 22:22:56.158 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
-21-04-2021 22:22:56.239 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-21-04-2021 22:22:56.317 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
-21-04-2021 22:22:56.902 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-21-04-2021 22:22:56.909 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21-04-2021 22:22:57.202 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-21-04-2021 22:22:57.318 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
-21-04-2021 22:22:57.319 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-21-04-2021 22:22:57.320 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-21-04-2021 22:22:57.323 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-21-04-2021 22:22:57.325 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-21-04-2021 22:22:57.335 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-21-04-2021 22:22:57.352 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at ru.geekbrains.aprilmarket.AprilMarketApplication.main(AprilMarketApplication.java:12)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 22 common frames omitted
-Caused by: java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
-	at org.springframework.util.Assert.isTrue(Assert.java:139)
-	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer.hasRole(ExpressionUrlAuthorizationConfigurer.java:186)
-	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer.access$300(ExpressionUrlAuthorizationConfigurer.java:82)
-	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl.hasRole(ExpressionUrlAuthorizationConfigurer.java:318)
-	at ru.geekbrains.aprilmarket.configs.SecurityConfig.configure(SecurityConfig.java:25)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:217)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:315)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:93)
-	at ru.geekbrains.aprilmarket.configs.SecurityConfig$$EnhancerBySpringCGLIB$$e1e47eaf.init(<generated>)
-	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338)
-	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300)
-	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 23 common frames omitted
-21-04-2021 22:23:17.394 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 2032 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
-21-04-2021 22:23:17.397 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-21-04-2021 22:23:18.305 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
-21-04-2021 22:23:18.311 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-21-04-2021 22:23:18.311 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
-21-04-2021 22:23:18.398 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
-21-04-2021 22:23:18.398 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 960 ms
-21-04-2021 22:23:18.489 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
-21-04-2021 22:23:18.495 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-21-04-2021 22:23:18.676 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-21-04-2021 22:23:18.691 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
-21-04-2021 22:23:18.728 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.024s)
-21-04-2021 22:23:18.735 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
-21-04-2021 22:23:18.736 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
-21-04-2021 22:23:18.778 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-21-04-2021 22:23:18.811 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
-21-04-2021 22:23:18.896 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-21-04-2021 22:23:18.966 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
-21-04-2021 22:23:19.446 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-21-04-2021 22:23:19.452 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21-04-2021 22:23:19.695 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-21-04-2021 22:23:19.830 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cab07dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c3d72fd, org.springframework.security.web.header.HeaderWriterFilter@68de8522, org.springframework.security.web.authentication.logout.LogoutFilter@4136b193, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@1d3546f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@640a6d4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a562255, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68f264bf, org.springframework.security.web.session.SessionManagementFilter@7ef7f414, org.springframework.security.web.access.ExceptionTranslationFilter@3879feec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cfb7450]
-21-04-2021 22:23:19.905 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-21-04-2021 22:23:19.912 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-21-04-2021 22:23:19.947 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 3 mappings in 'requestMappingHandlerMapping'
-21-04-2021 22:23:19.966 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.logMappings - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-21-04-2021 22:23:19.973 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-21-04-2021 22:23:19.984 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
-21-04-2021 22:23:20.069 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8189 (http) with context path '/shop'
-21-04-2021 22:23:20.076 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 3.05 seconds (JVM running for 3.585)
-21-04-2021 22:24:17.173 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-21-04-2021 22:24:17.189 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-21-04-2021 22:24:17.189 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
-21-04-2021 22:24:17.190 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initLocaleResolver - Detected AcceptHeaderLocaleResolver
-21-04-2021 22:24:17.190 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initThemeResolver - Detected FixedThemeResolver
-21-04-2021 22:24:17.191 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initRequestToViewNameTranslator - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2a349a73
-21-04-2021 22:24:17.192 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initFlashMapManager - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2a79da3a
-21-04-2021 22:24:17.192 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-21-04-2021 22:24:17.192 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
-21-04-2021 22:24:17.215 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
-21-04-2021 22:24:17.219 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
-21-04-2021 22:24:17.277 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
-21-04-2021 22:24:17.920 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-21-04-2021 22:24:17.921 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
-21-04-2021 22:24:17.930 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
-21-04-2021 22:33:54.964 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 8508 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
-21-04-2021 22:33:54.971 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-21-04-2021 22:33:55.883 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
-21-04-2021 22:33:55.890 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-21-04-2021 22:33:55.891 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
-21-04-2021 22:33:55.980 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
-21-04-2021 22:33:55.980 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 963 ms
-21-04-2021 22:33:56.070 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
-21-04-2021 22:33:56.075 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-21-04-2021 22:33:56.159 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-21-04-2021 22:33:56.175 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
-21-04-2021 22:33:56.211 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.023s)
-21-04-2021 22:33:56.218 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
-21-04-2021 22:33:56.219 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
-21-04-2021 22:33:56.261 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-21-04-2021 22:33:56.293 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
-21-04-2021 22:33:56.378 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-21-04-2021 22:33:56.460 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
-21-04-2021 22:33:56.912 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-21-04-2021 22:33:56.919 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21-04-2021 22:33:57.176 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-21-04-2021 22:33:57.337 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ab39942, org.springframework.security.web.context.SecurityContextPersistenceFilter@4136b193, org.springframework.security.web.header.HeaderWriterFilter@71cc0e35, org.springframework.security.web.authentication.logout.LogoutFilter@21dd9203, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@664254b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@570127fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@629de8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64186f60, org.springframework.security.web.session.SessionManagementFilter@1860b107, org.springframework.security.web.access.ExceptionTranslationFilter@2e2cd42c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fad28ac]
-21-04-2021 22:33:57.424 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-21-04-2021 22:33:57.431 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-21-04-2021 22:33:57.466 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 8 mappings in 'requestMappingHandlerMapping'
-21-04-2021 22:33:57.485 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.logMappings - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-21-04-2021 22:33:57.491 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-21-04-2021 22:33:57.501 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
-21-04-2021 22:33:57.585 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8189 (http) with context path '/shop'
-21-04-2021 22:33:57.593 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 2.998 seconds (JVM running for 3.629)
-21-04-2021 22:34:03.540 [http-nio-8189-exec-3] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-21-04-2021 22:34:03.540 [http-nio-8189-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
-21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initLocaleResolver - Detected AcceptHeaderLocaleResolver
-21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initThemeResolver - Detected FixedThemeResolver
-21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initRequestToViewNameTranslator - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2fe38b73
-21-04-2021 22:34:03.542 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initFlashMapManager - Detected org.springframework.web.servlet.support.SessionFlashMapManager@49222187
-21-04-2021 22:34:03.542 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-21-04-2021 22:34:03.542 [http-nio-8189-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-21-04-2021 22:34:03.561 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
-21-04-2021 22:34:03.563 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
-21-04-2021 22:34:03.610 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
-21-04-2021 22:34:04.190 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-21-04-2021 22:34:04.190 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
-21-04-2021 22:34:04.197 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
-21-04-2021 22:34:42.934 [http-nio-8189-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - "ERROR" dispatch for GET "/shop/error", parameters={}
-21-04-2021 22:34:42.936 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-21-04-2021 22:34:42.941 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-21-04-2021 22:34:42.943 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [{timestamp=Wed Apr 21 22:34:42 MSK 2021, status=403, error=Forbidden, message=, path=/shop/api/v1/pr (truncated)...]
-21-04-2021 22:34:42.948 [http-nio-8189-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Exiting from "ERROR" dispatch, status 403
-21-04-2021 22:34:57.835 [http-nio-8189-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - GET "/shop/api/v1/products", parameters={}
-21-04-2021 22:34:57.835 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.ProductController#findAllProducts()
-21-04-2021 22:34:57.849 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-21-04-2021 22:34:57.850 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [[ProductDto(id=1, title=Banana, price=50), ProductDto(id=2, title=Bread, price=40), ProductDto(id=3, (truncated)...]
-21-04-2021 22:34:57.853 [http-nio-8189-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
-21-04-2021 22:38:02.090 [http-nio-8189-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
-21-04-2021 22:38:02.091 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
-21-04-2021 22:38:02.091 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
-21-04-2021 22:38:02.418 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
-21-04-2021 22:38:02.418 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
-21-04-2021 22:38:02.419 [http-nio-8189-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:01:41.481 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 5660 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:01:41.496 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:01:43.778 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:01:43.793 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:01:43.809 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:01:44.078 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:01:44.078 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2475 ms
+28-04-2021 00:01:44.295 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:01:44.310 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:01:44.495 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:01:44.526 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:01:44.633 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.060s)
+28-04-2021 00:01:44.649 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:01:44.649 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:01:44.812 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:01:44.881 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:01:45.066 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:01:45.235 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:01:46.354 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:01:46.369 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:01:47.004 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:01:47.403 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4891d727, org.springframework.security.web.context.SecurityContextPersistenceFilter@6054ac20, org.springframework.security.web.header.HeaderWriterFilter@3ebc6d8b, org.springframework.security.web.authentication.logout.LogoutFilter@da11873, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@62e99458, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@673605ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@147097ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@550574cb, org.springframework.security.web.session.SessionManagementFilter@50e0b472, org.springframework.security.web.access.ExceptionTranslationFilter@61503d00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57e6d56a]
+28-04-2021 00:01:47.672 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:01:47.704 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:01:47.788 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:01:47.820 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:01:47.857 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:01:47.904 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:01:48.105 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:01:48.120 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 7.422 seconds (JVM running for 8.924)
+28-04-2021 00:01:58.622 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:01:58.622 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:01:58.626 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:01:58.642 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:01:58.646 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 20 ms
+28-04-2021 00:01:58.706 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:01:58.714 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:01:58.870 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:01:59.943 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:01:59.943 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:01:59.967 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:16.448 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:02:16.452 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:16.512 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:16.524 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1}]
+28-04-2021 00:02:16.532 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:22.230 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:02:22.234 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:22.242 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:22.242 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1}]
+28-04-2021 00:02:22.242 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:32.687 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/2", parameters={}
+28-04-2021 00:02:32.691 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:32.699 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:32.699 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=2, title=Bread, price=40)=1}]
+28-04-2021 00:02:32.703 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:35.264 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/2", parameters={}
+28-04-2021 00:02:35.264 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:35.272 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:35.276 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=2, title=Bread, price=40)=1}]
+28-04-2021 00:02:35.280 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:36.558 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/2", parameters={}
+28-04-2021 00:02:36.562 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:36.570 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:36.570 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=2, title=Bread, price=40)=1}]
+28-04-2021 00:02:36.570 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:02:48.553 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:02:48.557 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:02:48.565 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:02:48.565 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=3, title=Meat, price=500)=1, ProductDto(i (truncated)...]
+28-04-2021 00:02:48.565 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:03:54.180 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:03:54.180 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:03:54.193 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:03:54.193 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=2, title=Bread, price=40)=1}]
+28-04-2021 00:03:54.197 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:04:03.035 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:04:03.035 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:04:03.043 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:04:03.043 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=3, title=Meat, price=500)=1, ProductDto(i (truncated)...]
+28-04-2021 00:04:03.047 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:04:04.551 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:04:04.555 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:04:04.559 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:04:04.559 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=3, title=Meat, price=500)=1, ProductDto(i (truncated)...]
+28-04-2021 00:04:04.563 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:04:05.447 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:04:05.451 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:04:05.455 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:04:05.459 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=3, title=Meat, price=500)=1, ProductDto(i (truncated)...]
+28-04-2021 00:04:05.459 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:04.595 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 1916 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:06:04.614 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:06:06.932 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:06:06.947 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:06:06.947 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:06:07.186 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:06:07.186 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2491 ms
+28-04-2021 00:06:07.370 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:06:07.370 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:06:07.533 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:06:07.564 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:06:07.618 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.035s)
+28-04-2021 00:06:07.633 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:06:07.633 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:06:07.749 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:06:07.834 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:06:08.019 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:06:08.203 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:06:09.437 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:06:09.453 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:06:10.078 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:06:10.469 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70cac22a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fcbc336, org.springframework.security.web.header.HeaderWriterFilter@7d8d671b, org.springframework.security.web.authentication.logout.LogoutFilter@3e8fe7db, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@1bbef3c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61503d00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54ef9698, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57a0c261, org.springframework.security.web.session.SessionManagementFilter@6be2b567, org.springframework.security.web.access.ExceptionTranslationFilter@1774c4e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fc435e9]
+28-04-2021 00:06:10.758 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:06:10.774 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:06:10.846 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:06:10.854 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:06:10.902 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:06:10.942 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:06:11.142 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:06:11.166 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 7.373 seconds (JVM running for 9.04)
+28-04-2021 00:06:36.599 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:06:36.603 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:06:36.603 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:06:36.619 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:06:36.619 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 16 ms
+28-04-2021 00:06:36.679 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:06:36.687 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:06:36.839 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:06:37.859 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:37.859 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:06:37.887 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:52.472 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:06:52.472 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:06:52.516 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:52.524 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:06:52.532 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:56.334 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:06:56.338 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:06:56.346 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:56.346 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:06:56.350 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:57.505 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:06:57.505 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:06:57.513 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:57.513 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:06:57.517 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:58.424 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:06:58.428 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:06:58.436 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:58.440 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:06:58.444 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:06:58.839 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:06:58.843 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:06:58.847 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:06:58.851 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:06:58.851 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:11:03.034 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 9236 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:11:03.034 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:11:05.485 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:11:05.516 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:11:05.516 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:11:05.817 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:11:05.817 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2698 ms
+28-04-2021 00:11:06.071 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:11:06.086 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:11:06.335 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:11:06.371 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:11:06.472 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.057s)
+28-04-2021 00:11:06.472 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:11:06.487 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:11:06.620 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:11:06.687 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:11:06.871 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:11:07.034 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:11:08.106 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:11:08.138 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:11:08.808 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:11:09.140 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4edde05c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5737d116, org.springframework.security.web.header.HeaderWriterFilter@76208b80, org.springframework.security.web.authentication.logout.LogoutFilter@3539cf45, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@565efd7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6be2b567, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4229b92c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2911db81, org.springframework.security.web.session.SessionManagementFilter@7512a9a6, org.springframework.security.web.access.ExceptionTranslationFilter@60c8909a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dfd157b]
+28-04-2021 00:11:09.409 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:11:09.425 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:11:09.509 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:11:09.541 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:11:09.594 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:11:09.625 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:11:09.795 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:11:09.810 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 7.57 seconds (JVM running for 9.127)
+28-04-2021 00:11:22.783 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:11:22.783 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:11:22.783 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:11:22.795 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:11:22.799 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 16 ms
+28-04-2021 00:11:22.854 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:11:22.859 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:11:23.025 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:11:24.323 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:11:24.323 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:11:24.344 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:11:50.735 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:11:50.735 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:11:50.799 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:11:50.831 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{Product(id=3, title=Meat, price=500, categories=[], createdAt=2021-04-27T23:35:12.009866, updatedAt (truncated)...]
+28-04-2021 00:11:50.843 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:11:56.007 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:11:56.007 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:11:56.019 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:11:56.019 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{Product(id=3, title=Meat, price=500, categories=[], createdAt=2021-04-27T23:35:12.009866, updatedAt (truncated)...]
+28-04-2021 00:11:56.023 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:12:01.563 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:12:01.567 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:12:01.575 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:12:01.579 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{Product(id=3, title=Meat, price=500, categories=[], createdAt=2021-04-27T23:35:12.009866, updatedAt (truncated)...]
+28-04-2021 00:12:01.579 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:15:33.744 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 17028 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:15:33.760 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:15:36.090 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:15:36.121 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:15:36.121 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:15:36.387 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:15:36.387 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2532 ms
+28-04-2021 00:15:36.599 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:15:36.621 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:15:36.874 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:15:36.906 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:15:37.015 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.068s)
+28-04-2021 00:15:37.031 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:15:37.046 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:15:37.220 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:15:37.282 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:15:37.513 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:15:37.733 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:15:38.850 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:15:38.865 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:15:39.422 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:15:39.858 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1504b493, org.springframework.security.web.context.SecurityContextPersistenceFilter@47c356e, org.springframework.security.web.header.HeaderWriterFilter@3fcc7f5c, org.springframework.security.web.authentication.logout.LogoutFilter@64cdc310, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@1e3dc24f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b80b41d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32a074ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19de32cb, org.springframework.security.web.session.SessionManagementFilter@1fa44f66, org.springframework.security.web.access.ExceptionTranslationFilter@6b43b101, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fce1069]
+28-04-2021 00:15:40.108 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:15:40.139 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:15:40.217 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:15:40.233 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:15:40.264 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:15:40.295 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:15:40.467 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:15:40.483 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 7.579 seconds (JVM running for 9.113)
+28-04-2021 00:16:58.591 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:16:58.592 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:16:58.593 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:16:58.605 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:16:58.605 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 13 ms
+28-04-2021 00:16:58.644 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:16:58.650 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:16:58.762 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:16:59.651 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:16:59.652 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:16:59.667 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:17:18.900 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:17:18.902 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:17:18.955 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:17:18.963 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:17:18.969 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:17:22.442 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:17:22.444 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:17:22.452 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:17:22.453 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:17:22.456 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:17:23.941 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:17:23.943 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:17:23.950 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:17:23.951 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:17:23.954 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:18:15.070 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 10836 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:18:15.076 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:18:17.073 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:18:17.087 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:18:17.088 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:18:17.291 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:18:17.292 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2149 ms
+28-04-2021 00:18:17.473 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:18:17.484 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:18:17.643 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:18:17.662 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:18:17.723 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.034s)
+28-04-2021 00:18:17.731 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:18:17.733 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:18:17.850 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:18:17.928 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:18:18.110 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:18:18.283 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:18:19.253 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:18:19.269 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:18:19.753 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:18:20.105 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e4d93f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@53d2b827, org.springframework.security.web.header.HeaderWriterFilter@550574cb, org.springframework.security.web.authentication.logout.LogoutFilter@176054b7, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@5cfe28e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4504a4ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1368e2f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d1b43d8, org.springframework.security.web.session.SessionManagementFilter@4468c0ea, org.springframework.security.web.access.ExceptionTranslationFilter@13866865, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6839d03b]
+28-04-2021 00:18:20.292 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:18:20.308 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:18:20.403 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:18:20.418 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:18:20.450 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:18:20.465 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:18:20.653 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:18:20.669 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 6.28 seconds (JVM running for 8.948)
+28-04-2021 00:18:31.260 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:18:31.261 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:18:31.261 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:18:31.275 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:18:31.276 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 15 ms
+28-04-2021 00:18:31.321 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:18:31.326 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:18:31.454 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:18:32.338 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:18:32.340 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:18:32.356 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:19:03.295 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:19:03.298 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:19:03.347 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:19:03.356 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:19:03.361 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:19:25.617 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:19:25.619 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:19:55.180 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:19:55.182 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:19:55.187 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:19:55.637 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:19:55.637 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:19:55.637 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-04-2021 00:19:55.653 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+28-04-2021 00:20:23.544 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication on LAPTOP-JN1Q65SR with PID 16328 (C:\JavaProjects\april-market\target\classes started by fargu in C:\JavaProjects\april-market)
+28-04-2021 00:20:23.560 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-04-2021 00:20:25.532 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-04-2021 00:20:25.547 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-04-2021 00:20:25.547 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.43]
+28-04-2021 00:20:25.736 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+28-04-2021 00:20:25.736 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2098 ms
+28-04-2021 00:20:25.924 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.4 by Redgate
+28-04-2021 00:20:25.939 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-04-2021 00:20:26.096 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-04-2021 00:20:26.111 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.6)
+28-04-2021 00:20:26.189 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.045s)
+28-04-2021 00:20:26.189 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+28-04-2021 00:20:26.205 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+28-04-2021 00:20:26.330 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-04-2021 00:20:26.403 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.28.Final
+28-04-2021 00:20:26.622 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-04-2021 00:20:26.794 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+28-04-2021 00:20:27.742 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-04-2021 00:20:27.758 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:20:28.250 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-04-2021 00:20:28.604 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@406808eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f87a7c7, org.springframework.security.web.header.HeaderWriterFilter@35c95869, org.springframework.security.web.authentication.logout.LogoutFilter@3ee200ae, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@225ac5e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@682fe17b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67b09e34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e93c46, org.springframework.security.web.session.SessionManagementFilter@7792e14f, org.springframework.security.web.access.ExceptionTranslationFilter@7ee3a2ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67d8613]
+28-04-2021 00:20:28.809 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:20:28.824 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+28-04-2021 00:20:28.902 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 10 mappings in 'requestMappingHandlerMapping'
+28-04-2021 00:20:28.918 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.registerHandlers - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+28-04-2021 00:20:28.958 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+28-04-2021 00:20:28.974 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+28-04-2021 00:20:29.178 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/shop'
+28-04-2021 00:20:29.194 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 6.371 seconds (JVM running for 7.867)
+28-04-2021 00:20:44.203 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-04-2021 00:20:44.205 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-04-2021 00:20:44.205 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+28-04-2021 00:20:44.219 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+28-04-2021 00:20:44.220 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 15 ms
+28-04-2021 00:20:44.263 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+28-04-2021 00:20:44.268 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+28-04-2021 00:20:44.401 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+28-04-2021 00:20:45.295 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:20:45.297 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+28-04-2021 00:20:45.313 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:11.849 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:11.851 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:21:11.901 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:11.912 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:21:11.917 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:13.247 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:13.249 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:21:19.743 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:19.745 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=2}]
+28-04-2021 00:21:19.748 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:35.138 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:35.140 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:21:35.147 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:35.148 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:21:35.150 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:36.298 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:36.300 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:21:36.306 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:36.307 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=4}]
+28-04-2021 00:21:36.310 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:37.172 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:37.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:21:37.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:37.182 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=5}]
+28-04-2021 00:21:37.185 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:43.404 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:43.406 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:21:43.416 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:43.417 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=4}]
+28-04-2021 00:21:43.421 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:44.283 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:44.284 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:21:44.290 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:44.291 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:21:44.294 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:44.989 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:44.990 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:21:44.999 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:45.000 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=2}]
+28-04-2021 00:21:45.003 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:45.897 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:45.900 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:21:45.908 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:45.909 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:21:45.912 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:46.916 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - DELETE "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:46.918 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#deleteProduct(Long)
+28-04-2021 00:21:46.928 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:46.928 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{}]
+28-04-2021 00:21:46.931 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:21:53.450 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - PUT "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:53.459 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+28-04-2021 00:21:53.460 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 405 METHOD_NOT_ALLOWED
+28-04-2021 00:21:53.468 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - "ERROR" dispatch for PUT "/shop/error", parameters={}
+28-04-2021 00:21:53.471 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+28-04-2021 00:21:53.480 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:53.481 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [{timestamp=Wed Apr 28 00:21:53 MSK 2021, status=405, error=Method Not Allowed, message=, path=/shop/ (truncated)...]
+28-04-2021 00:21:53.490 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Exiting from "ERROR" dispatch, status 405
+28-04-2021 00:21:54.436 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - PUT "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:21:54.438 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+28-04-2021 00:21:54.438 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 405 METHOD_NOT_ALLOWED
+28-04-2021 00:21:54.440 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - "ERROR" dispatch for PUT "/shop/error", parameters={}
+28-04-2021 00:21:54.442 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+28-04-2021 00:21:54.444 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:21:54.445 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [{timestamp=Wed Apr 28 00:21:54 MSK 2021, status=405, error=Method Not Allowed, message=, path=/shop/ (truncated)...]
+28-04-2021 00:21:54.447 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Exiting from "ERROR" dispatch, status 405
+28-04-2021 00:22:02.252 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:22:02.254 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:02.259 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:02.260 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=1}]
+28-04-2021 00:22:02.261 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:03.768 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:22:03.770 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:03.778 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:03.779 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=2}]
+28-04-2021 00:22:03.782 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:04.662 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/3", parameters={}
+28-04-2021 00:22:04.664 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:04.670 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:04.671 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:22:04.674 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:09.042 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:22:09.045 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:09.051 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:09.052 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=1, ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:22:09.055 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:10.090 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:22:10.092 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:10.097 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:10.098 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=2, ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:22:10.100 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:10.958 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:22:10.960 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:10.969 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:10.970 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=3, ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:22:10.974 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:12.298 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/api/v1/cart/1", parameters={}
+28-04-2021 00:22:12.300 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.CartController#addProduct(Long)
+28-04-2021 00:22:12.305 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+28-04-2021 00:22:12.307 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [{ProductDto(id=1, title=Banana, price=50)=4, ProductDto(id=3, title=Meat, price=500)=3}]
+28-04-2021 00:22:12.309 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+28-04-2021 00:22:27.495 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+28-04-2021 00:22:27.527 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-04-2021 00:22:27.542 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-04-2021 00:22:27.573 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
