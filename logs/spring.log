@@ -1,0 +1,184 @@
+21-04-2021 22:22:54.353 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 15544 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
+21-04-2021 22:22:54.356 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-04-2021 22:22:55.422 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
+21-04-2021 22:22:55.428 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-04-2021 22:22:55.429 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
+21-04-2021 22:22:55.838 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+21-04-2021 22:22:55.838 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
+21-04-2021 22:22:55.928 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
+21-04-2021 22:22:55.933 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-04-2021 22:22:56.010 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-04-2021 22:22:56.024 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
+21-04-2021 22:22:56.065 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.028s)
+21-04-2021 22:22:56.073 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+21-04-2021 22:22:56.074 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+21-04-2021 22:22:56.121 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-04-2021 22:22:56.158 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+21-04-2021 22:22:56.239 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-04-2021 22:22:56.317 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+21-04-2021 22:22:56.902 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-04-2021 22:22:56.909 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-04-2021 22:22:57.202 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-04-2021 22:22:57.318 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
+21-04-2021 22:22:57.319 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-04-2021 22:22:57.320 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-04-2021 22:22:57.323 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-04-2021 22:22:57.325 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+21-04-2021 22:22:57.335 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21-04-2021 22:22:57.352 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at ru.geekbrains.aprilmarket.AprilMarketApplication.main(AprilMarketApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: role should not start with 'ROLE_' since it is automatically inserted. Got 'ROLE_ADMIN'
+	at org.springframework.util.Assert.isTrue(Assert.java:139)
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer.hasRole(ExpressionUrlAuthorizationConfigurer.java:186)
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer.access$300(ExpressionUrlAuthorizationConfigurer.java:82)
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl.hasRole(ExpressionUrlAuthorizationConfigurer.java:318)
+	at ru.geekbrains.aprilmarket.configs.SecurityConfig.configure(SecurityConfig.java:25)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:217)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:315)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:93)
+	at ru.geekbrains.aprilmarket.configs.SecurityConfig$$EnhancerBySpringCGLIB$$e1e47eaf.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+21-04-2021 22:23:17.394 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 2032 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
+21-04-2021 22:23:17.397 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-04-2021 22:23:18.305 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
+21-04-2021 22:23:18.311 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-04-2021 22:23:18.311 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
+21-04-2021 22:23:18.398 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+21-04-2021 22:23:18.398 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 960 ms
+21-04-2021 22:23:18.489 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
+21-04-2021 22:23:18.495 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-04-2021 22:23:18.676 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-04-2021 22:23:18.691 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
+21-04-2021 22:23:18.728 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.024s)
+21-04-2021 22:23:18.735 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+21-04-2021 22:23:18.736 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+21-04-2021 22:23:18.778 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-04-2021 22:23:18.811 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+21-04-2021 22:23:18.896 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-04-2021 22:23:18.966 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+21-04-2021 22:23:19.446 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-04-2021 22:23:19.452 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-04-2021 22:23:19.695 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-04-2021 22:23:19.830 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cab07dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c3d72fd, org.springframework.security.web.header.HeaderWriterFilter@68de8522, org.springframework.security.web.authentication.logout.LogoutFilter@4136b193, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@1d3546f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@640a6d4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a562255, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68f264bf, org.springframework.security.web.session.SessionManagementFilter@7ef7f414, org.springframework.security.web.access.ExceptionTranslationFilter@3879feec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cfb7450]
+21-04-2021 22:23:19.905 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+21-04-2021 22:23:19.912 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+21-04-2021 22:23:19.947 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 3 mappings in 'requestMappingHandlerMapping'
+21-04-2021 22:23:19.966 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.logMappings - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+21-04-2021 22:23:19.973 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+21-04-2021 22:23:19.984 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+21-04-2021 22:23:20.069 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8189 (http) with context path '/shop'
+21-04-2021 22:23:20.076 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 3.05 seconds (JVM running for 3.585)
+21-04-2021 22:24:17.173 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-04-2021 22:24:17.189 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-04-2021 22:24:17.189 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+21-04-2021 22:24:17.190 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initLocaleResolver - Detected AcceptHeaderLocaleResolver
+21-04-2021 22:24:17.190 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initThemeResolver - Detected FixedThemeResolver
+21-04-2021 22:24:17.191 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initRequestToViewNameTranslator - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2a349a73
+21-04-2021 22:24:17.192 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initFlashMapManager - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2a79da3a
+21-04-2021 22:24:17.192 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+21-04-2021 22:24:17.192 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
+21-04-2021 22:24:17.215 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+21-04-2021 22:24:17.219 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+21-04-2021 22:24:17.277 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+21-04-2021 22:24:17.920 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+21-04-2021 22:24:17.921 [http-nio-8189-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+21-04-2021 22:24:17.930 [http-nio-8189-exec-1] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+21-04-2021 22:33:54.964 [main] INFO  r.g.a.AprilMarketApplication.logStarting - Starting AprilMarketApplication using Java 16.0.1 on DarkSavant-PC93 with PID 8508 (C:\java\april-market\target\classes started by DarkSavant in C:\java\april-market)
+21-04-2021 22:33:54.971 [main] INFO  r.g.a.AprilMarketApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-04-2021 22:33:55.883 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8189 (http)
+21-04-2021 22:33:55.890 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-04-2021 22:33:55.891 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.45]
+21-04-2021 22:33:55.980 [main] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring embedded WebApplicationContext
+21-04-2021 22:33:55.980 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 963 ms
+21-04-2021 22:33:56.070 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 7.1.1 by Redgate
+21-04-2021 22:33:56.075 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-04-2021 22:33:56.159 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-04-2021 22:33:56.175 [main] INFO  o.f.c.i.database.base.DatabaseType.info - Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 12.4)
+21-04-2021 22:33:56.211 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 3 migrations (execution time 00:00.023s)
+21-04-2021 22:33:56.218 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema "april-market": 2
+21-04-2021 22:33:56.219 [main] INFO  o.f.core.internal.command.DbMigrate.info - Schema "april-market" is up to date. No migration necessary.
+21-04-2021 22:33:56.261 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-04-2021 22:33:56.293 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.30.Final
+21-04-2021 22:33:56.378 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-04-2021 22:33:56.460 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL94Dialect
+21-04-2021 22:33:56.912 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-04-2021 22:33:56.919 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-04-2021 22:33:57.176 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-04-2021 22:33:57.337 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ab39942, org.springframework.security.web.context.SecurityContextPersistenceFilter@4136b193, org.springframework.security.web.header.HeaderWriterFilter@71cc0e35, org.springframework.security.web.authentication.logout.LogoutFilter@21dd9203, ru.geekbrains.aprilmarket.beans.JwtRequestFilter@664254b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@570127fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@629de8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64186f60, org.springframework.security.web.session.SessionManagementFilter@1860b107, org.springframework.security.web.access.ExceptionTranslationFilter@2e2cd42c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fad28ac]
+21-04-2021 22:33:57.424 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+21-04-2021 22:33:57.431 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+21-04-2021 22:33:57.466 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized - 8 mappings in 'requestMappingHandlerMapping'
+21-04-2021 22:33:57.485 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping.logMappings - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+21-04-2021 22:33:57.491 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+21-04-2021 22:33:57.501 [main] WARN  o.s.b.a.m.MustacheAutoConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+21-04-2021 22:33:57.585 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8189 (http) with context path '/shop'
+21-04-2021 22:33:57.593 [main] INFO  r.g.a.AprilMarketApplication.logStarted - Started AprilMarketApplication in 2.998 seconds (JVM running for 3.629)
+21-04-2021 22:34:03.540 [http-nio-8189-exec-3] INFO  o.a.c.c.C.[.[localhost].[/shop].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-04-2021 22:34:03.540 [http-nio-8189-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initMultipartResolver - Detected StandardServletMultipartResolver
+21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initLocaleResolver - Detected AcceptHeaderLocaleResolver
+21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initThemeResolver - Detected FixedThemeResolver
+21-04-2021 22:34:03.541 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initRequestToViewNameTranslator - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2fe38b73
+21-04-2021 22:34:03.542 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initFlashMapManager - Detected org.springframework.web.servlet.support.SessionFlashMapManager@49222187
+21-04-2021 22:34:03.542 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.initServletBean - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+21-04-2021 22:34:03.542 [http-nio-8189-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-04-2021 22:34:03.561 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+21-04-2021 22:34:03.563 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+21-04-2021 22:34:03.610 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+21-04-2021 22:34:04.190 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+21-04-2021 22:34:04.190 [http-nio-8189-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+21-04-2021 22:34:04.197 [http-nio-8189-exec-3] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+21-04-2021 22:34:42.934 [http-nio-8189-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - "ERROR" dispatch for GET "/shop/error", parameters={}
+21-04-2021 22:34:42.936 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+21-04-2021 22:34:42.941 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+21-04-2021 22:34:42.943 [http-nio-8189-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [{timestamp=Wed Apr 21 22:34:42 MSK 2021, status=403, error=Forbidden, message=, path=/shop/api/v1/pr (truncated)...]
+21-04-2021 22:34:42.948 [http-nio-8189-exec-2] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Exiting from "ERROR" dispatch, status 403
+21-04-2021 22:34:57.835 [http-nio-8189-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - GET "/shop/api/v1/products", parameters={}
+21-04-2021 22:34:57.835 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.ProductController#findAllProducts()
+21-04-2021 22:34:57.849 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+21-04-2021 22:34:57.850 [http-nio-8189-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Writing [[ProductDto(id=1, title=Banana, price=50), ProductDto(id=2, title=Bread, price=40), ProductDto(id=3, (truncated)...]
+21-04-2021 22:34:57.853 [http-nio-8189-exec-6] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
+21-04-2021 22:38:02.090 [http-nio-8189-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.traceDebug - POST "/shop/auth", parameters={}
+21-04-2021 22:38:02.091 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler - Mapped to ru.geekbrains.aprilmarket.controllers.AuthController#createToken(JwtRequest)
+21-04-2021 22:38:02.091 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug - Read "application/json;charset=UTF-8" to [JwtRequest(username=bob1, password=111)]
+21-04-2021 22:38:02.418 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.writeWithMessageConverters - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+21-04-2021 22:38:02.418 [http-nio-8189-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor.traceDebug - Writing [JwtResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2IxIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxO (truncated)...]
+21-04-2021 22:38:02.419 [http-nio-8189-exec-7] DEBUG o.s.web.servlet.DispatcherServlet.logResult - Completed 200 OK
